@@ -1,7 +1,9 @@
 FROM node:alpine
-WORKDIR '/var/html'
+WORKDIR /var/html
+
 COPY package*.json ./
 RUN npm install
+
 COPY . .
 RUN npm run build
 
